@@ -76,7 +76,7 @@ while True:
         serial=[entry['serial'] for entry in kq['data']]
         
         tinh=int(datetime.datetime.now().replace(second=0).timestamp())
-        tinh=requests.get(f'http://localhost:3000/{seed}')
+        tinh=int(requests.get(f'http://localhost:3000/{tinh}').text)
         
         if checkk!=landau:
           if kiemtra in result[0]:
